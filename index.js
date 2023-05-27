@@ -18,11 +18,12 @@ app.use(express.static('public'))
 
 // create application/json parser
 
-
-//Rutas
+//Lectura y parseo del body
 app.use(express.json());
 
+//Rutas
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/task', require('./routes/task'));
 
 
 //Escuchar en puerto 4000
